@@ -13,9 +13,13 @@
 		72EF75B3272327BE004685A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72EF75B1272327BE004685A5 /* Main.storyboard */; };
 		72EF75B5272327C0004685A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72EF75B4272327C0004685A5 /* Assets.xcassets */; };
 		72EF75B8272327C0004685A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72EF75B6272327C0004685A5 /* LaunchScreen.storyboard */; };
+		72EF75C327232B7B004685A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72EF75C227232B7B004685A5 /* GoogleService-Info.plist */; };
+		EC28E9A35C9EFEB2B336F21C /* Pods_notiTrial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6503C90D120F3B6E94EA6276 /* Pods_notiTrial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6503C90D120F3B6E94EA6276 /* Pods_notiTrial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notiTrial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA0E142E4E6CB611E0DE447 /* Pods-notiTrial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notiTrial.debug.xcconfig"; path = "Target Support Files/Pods-notiTrial/Pods-notiTrial.debug.xcconfig"; sourceTree = "<group>"; };
 		72EF75A8272327BE004685A5 /* notiTrial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notiTrial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EF75AB272327BE004685A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72EF75AD272327BE004685A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,9 @@
 		72EF75B4272327C0004685A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72EF75B7272327C0004685A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72EF75B9272327C0004685A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72EF75BF27232A9B004685A5 /* notiTrial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notiTrial.entitlements; sourceTree = "<group>"; };
+		72EF75C227232B7B004685A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8986FE243405CEC928A80E8F /* Pods-notiTrial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notiTrial.release.xcconfig"; path = "Target Support Files/Pods-notiTrial/Pods-notiTrial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC28E9A35C9EFEB2B336F21C /* Pods_notiTrial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AAFC46B42BABABB25DE7EF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6503C90D120F3B6E94EA6276 /* Pods_notiTrial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		72EF759F272327BE004685A5 = {
 			isa = PBXGroup;
 			children = (
 				72EF75AA272327BE004685A5 /* notiTrial */,
 				72EF75A9272327BE004685A5 /* Products */,
+				8D049ABA621443FEFE3AC181 /* Pods */,
+				2AAFC46B42BABABB25DE7EF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +74,8 @@
 		72EF75AA272327BE004685A5 /* notiTrial */ = {
 			isa = PBXGroup;
 			children = (
+				72EF75C227232B7B004685A5 /* GoogleService-Info.plist */,
+				72EF75BF27232A9B004685A5 /* notiTrial.entitlements */,
 				72EF75AB272327BE004685A5 /* AppDelegate.swift */,
 				72EF75AD272327BE004685A5 /* SceneDelegate.swift */,
 				72EF75AF272327BE004685A5 /* ViewController.swift */,
@@ -67,6 +87,15 @@
 			path = notiTrial;
 			sourceTree = "<group>";
 		};
+		8D049ABA621443FEFE3AC181 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EA0E142E4E6CB611E0DE447 /* Pods-notiTrial.debug.xcconfig */,
+				8986FE243405CEC928A80E8F /* Pods-notiTrial.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72EF75BC272327C0004685A5 /* Build configuration list for PBXNativeTarget "notiTrial" */;
 			buildPhases = (
+				126BA134FFC428E9202838E5 /* [CP] Check Pods Manifest.lock */,
 				72EF75A4272327BE004685A5 /* Sources */,
 				72EF75A5272327BE004685A5 /* Frameworks */,
 				72EF75A6272327BE004685A5 /* Resources */,
+				4902E7F993116B052C268646 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +159,53 @@
 				72EF75B8272327C0004685A5 /* LaunchScreen.storyboard in Resources */,
 				72EF75B5272327C0004685A5 /* Assets.xcassets in Resources */,
 				72EF75B3272327BE004685A5 /* Main.storyboard in Resources */,
+				72EF75C327232B7B004685A5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		126BA134FFC428E9202838E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-notiTrial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4902E7F993116B052C268646 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-notiTrial/Pods-notiTrial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-notiTrial/Pods-notiTrial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-notiTrial/Pods-notiTrial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72EF75A4272327BE004685A5 /* Sources */ = {
@@ -284,9 +358,11 @@
 		};
 		72EF75BD272327C0004685A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EA0E142E4E6CB611E0DE447 /* Pods-notiTrial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = notiTrial/notiTrial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L973MWQ443;
@@ -312,9 +388,11 @@
 		};
 		72EF75BE272327C0004685A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8986FE243405CEC928A80E8F /* Pods-notiTrial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = notiTrial/notiTrial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L973MWQ443;

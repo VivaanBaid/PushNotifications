@@ -6,15 +6,58 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseMessaging
+import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
+    
+    
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        let replyAction = UNNotificationAction(
+                identifier: "reply.action",
+                title: "Reply to this message",
+                options: [])
+        
+        let pushNotificationButtons = UNNotificationCategory(
+             identifier: "allreply.action",
+             actions: [replyAction],
+             intentIdentifiers: [],
+             options: [])
+        
+        
+        Messaging.messaging().delegate = self
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().setNotificationCategories([pushNotificationButtons])
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { success, error in
+            if let e = error{
+                print(e.localizedDescription)
+            }else{
+                print("Success in APNS registry")
+                DispatchQueue.main.async {
+                    application.registerForRemoteNotifications()
+                }
+                
+            }
+        }
         return true
+    }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        messaging.token { mytoken, error in
+            if let e = error{
+                print(e.localizedDescription)
+            }else{
+                print(mytoken!)
+                
+            }
+        }
     }
 
     // MARK: UISceneSession Lifecycle
